@@ -1,0 +1,50 @@
+# Rider (JetBrains)
+.idea/
+*.sln.iml
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+*.vspscc
+*.vssscc
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Rider & ReSharper caches
+.idea/
+*.DotSettings.user
+.ReSharper*/    # in case ReSharper is also used
+*_Resharper*/
+
+# Others
+*.dbmdl
+*.bak
+*.orig
+*.tmp
+*.swp
+
+# Visual Studio Code
+.vscode/
+
+# Npm/Yarn artifacts (if frontend exists)
+node_modules/
+dist/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db

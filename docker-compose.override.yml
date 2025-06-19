@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  customers-service:
+    build:
+      context: .
+      dockerfile: src/Services/Customers/Neoverse.Customers.Api/Dockerfile
+    environment:
+      - Database__Provider=Postgres
+      - ConnectionStrings__Postgres=Host=postgres;Database=customers;Username=postgres;Password=postgres
+      - ConnectionStrings__Redis=redis
+      - Kafka__BootstrapServers=kafka:9092
+      - Otlp__Endpoint=http://otel-collector:4317
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - postgres
+      - redis
+      - kafka
+      - otel-collector
+    ports:
+      - "5001:80"
+
+  document-service:
+    build:
+      context: .
+      dockerfile: src/Services/DocumentManagement/Neoverse.DocumentManagement.Api/Dockerfile
+    environment:
+      - Database__Provider=Postgres
+      - ConnectionStrings__Postgres=Host=postgres;Database=docs;Username=postgres;Password=postgres
+      - ConnectionStrings__Redis=redis
+      - Otlp__Endpoint=http://otel-collector:4317
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - postgres
+      - redis
+      - otel-collector
+    ports:
+      - "5002:80"
