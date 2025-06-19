@@ -176,3 +176,6 @@ ProjectNeoverse provides a robust microservice architecture template with:
 - Built-in multi-language and encryption support
 
 This skeleton serves as a solid foundation for building enterprise-grade distributed systems.
+
+
+<img width="712" alt="image" src="https://github.com/user-attachments/assets/22f168ed-ab31-4ed3-882c-92fd02374d47" />
