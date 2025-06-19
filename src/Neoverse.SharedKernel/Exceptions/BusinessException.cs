@@ -9,9 +9,3 @@ public class BusinessException : Exception
         Code = code;
     }
 }
-
-public static class ErrorCodes
-{
-    public const string NotFound = "not_found";
-    public const string ValidationError = "validation_error";
-}

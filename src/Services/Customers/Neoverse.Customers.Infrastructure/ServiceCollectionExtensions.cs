@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Neoverse.Customers.Application.Interfaces;
+using Neoverse.Customers.Infrastructure.EventBus;
 using Neoverse.Customers.Infrastructure.EventHandler;
 using Neoverse.Customers.Infrastructure.Repository;
 using StackExchange.Redis;

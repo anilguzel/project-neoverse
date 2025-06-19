@@ -1,4 +1,5 @@
 using Neoverse.Customers.Domain.Events;
+using Neoverse.Customers.Infrastructure.EventBus;
 using Neoverse.SharedKernel.Events;
 
 namespace Neoverse.Customers.Infrastructure.EventHandler;

@@ -1,6 +1,6 @@
 using Confluent.Kafka;
 
-namespace Neoverse.Customers.Infrastructure;
+namespace Neoverse.Customers.Infrastructure.EventBus;
 
 public class KafkaMessageBus
 {

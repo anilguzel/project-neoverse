@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Neoverse.SharedKernel.Constants;
 using Neoverse.SharedKernel.Exceptions;
 
 namespace Neoverse.ApiBase.Middleware;
@@ -35,7 +36,7 @@ public class ExceptionHandlingMiddleware
             _logger.LogError(ex, "Unhandled exception");
             context.Response.StatusCode = StatusCodes.Status500InternalServerError;
             context.Response.ContentType = "application/json";
-            var json = JsonSerializer.Serialize(ApiResult<string>.Fail("internal_error", "An unexpected error occurred"));
+            var json = JsonSerializer.Serialize(ApiResult<string>.Fail(MessageCodes.InternalError, Messages.InternalError));
             await context.Response.WriteAsync(json);
         }
     }
