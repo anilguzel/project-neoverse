@@ -155,7 +155,7 @@ ConnectionStrings__SqlServer=...
 
 ##  Running the Full Stack with Docker Compose
 
-To start PostgreSQL, Redis, Kafka, Elasticsearch, and the OpenTelemetry Collector:
+To start PostgreSQL, Redis, Kafka, Elasticsearch, Kibana and the OpenTelemetry Collector:
 
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.override.yml up -d --build
